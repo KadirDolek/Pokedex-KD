@@ -1,0 +1,49 @@
+#pokedex{
+    height: 850px;
+    width: 550px;
+    background-color: crimson;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 2px;
+}
+.scroll-liste {
+  height: 100%;
+  max-height: 800px;
+  overflow-y: auto;
+}
+#ecran{
+    height: 750px;
+    width: 380px;
+    background-color: rgba(128, 128, 128, 0.877);
+    margin-top: 2.5%;
+    border-radius: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#nom{
+    height: 80px;
+    width: 376px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
+#template{
+    height: 550px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+
+}
+#liste{
+    width: 160px;
+    height: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 10px;
+}
+p{
+    color: cornsilk;
+    font-weight: bold;
+}
