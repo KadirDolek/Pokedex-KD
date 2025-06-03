@@ -4,7 +4,7 @@
     background-color: crimson;
     display: flex;
     border-radius: 10px;
-    box-shadow: 0px 1px 5px 2px;
+    border: 7px solid black;
 }
 .scroll-liste {
   height: 100%;
@@ -14,11 +14,13 @@
 #ecran{
     height: 750px;
     width: 380px;
-    background-color: rgba(128, 128, 128, 0.877);
+    background-position: 20px 220px;
+    background-size: 120%;
     margin-top: 2.5%;
     border-radius: 10px;
     margin-top: auto;
     margin-bottom: auto;
+    z-index: 1;
 }
 #nom{
     height: 80px;
@@ -47,3 +49,46 @@ p{
     color: cornsilk;
     font-weight: bold;
 }
+
+#clapet img{
+    height: 870px;
+    width: 550px;
+    position: absolute;
+    z-index: 2;
+    /* transform: translateX(-572px) translateY(-22px); */
+    transform: translateX(0px) translateY(-30px);
+    background-size: cover;
+    border-radius: 15px;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+    clip-path: inset(15px 0 0 0);
+    border: 7px solid black;
+    animation: slide  1s forwards
+}
+#ecrou{
+    width: 170px !important;
+    height: 170px !important;
+    position: relative;
+    transform: translateX(-85px) translateY(120px) !important;
+    border: none !important;
+    z-index: 0 !important;
+}
+#ecrou1{
+    width: 170px !important;
+    height: 170px !important;
+    position: relative;
+    transform: translateX(-85px) translateY(570px) !important;
+    border: none !important;
+    z-index: 0 !important;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0px) translateY(-30px);
+  }
+  to {
+    transform: translateX(-560px) translateY(-26px);
+  }
+}  
+
+ 

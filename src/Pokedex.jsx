@@ -1,17 +1,28 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
 import Info from './Info';
+import char from './assets/charnieres.png'
+import PokedexT from './assets/pokedex.png'
+import backgroundImage from './assets/bg-herb.png';
+
+
 
 export default function Pokedex(){
- const [data,setData] = useState([]);
- const [recherche, setRecherche] = useState("");
+const [data,setData] = useState([]);
+const [recherche, setRecherche] = useState("");
+const clapetRef = useRef(null);
 
- useEffect(()=>{
+  useEffect(() => {
+    if (clapetRef.current) {
+      clapetRef.current.classList.add('#clapet img');
+    }
+
     axios.get('https://pokebuildapi.fr/api/v1/pokemon')
-    .then((response)=>setData(response.data))
-    .catch((error)=>console.log(error));
- },[])
+      .then((response) => setData(response.data))
+      .catch((error) => console.log(error));
+  }, []);
+
 
  const listeFiltre = data.filter((pokemon) => {
    return pokemon.name.toLowerCase().includes(recherche.toLowerCase()) 
@@ -19,7 +30,12 @@ export default function Pokedex(){
 
     return(
     <div id="pokedex">
-          <div id='ecran'>
+      <div id='clapet'>
+        <img src={PokedexT} id='pokedexx' alt="" />
+        <img id='ecrou' src={char} alt="" />
+        <img id='ecrou1' src={char} alt="" />
+      </div>
+          <div id='ecran' style={{ backgroundImage: `url(${backgroundImage})`, backgroundRepeat: 'no-repeat'}}>
             <div id='nom'>
               <input 
                 type="text" 
@@ -30,7 +46,7 @@ export default function Pokedex(){
                 value={recherche}
                 onChange={(e) => setRecherche(e.target.value)} />
             </div>
-            <div id='template'>
+            <div id="template">
                 <Info/>
             </div>
           </div>

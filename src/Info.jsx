@@ -23,7 +23,7 @@ export default function Info() {
     return (
         <div style={{textAlign:'center', display:'flex', justifyContent:'center', flexDirection:'column', lineHeight:'3px'}}>
             <h3>{data.name}</h3>
-            <img style={{scale:0.8}} src={data.image} alt={data.name} />
+            <img style={{scale:0.7}} src={data.image} alt={data.name} />
             <p>HP: {data.stats.HP}</p>
             <p>Attaque: {data.stats.attack}</p>
             <p>Défense: {data.stats.defense}</p>
