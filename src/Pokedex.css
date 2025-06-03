@@ -1,7 +1,7 @@
 #pokedex{
     height: 850px;
     width: 550px;
-    background-color: crimson;
+    background-color: rgb(199, 1, 26);
     display: flex;
     border-radius: 10px;
     border: 7px solid black;
@@ -51,19 +51,18 @@ p{
 }
 
 #clapet img{
-    height: 870px;
+    height: 860px;
     width: 550px;
     position: absolute;
     z-index: 2;
-    /* transform: translateX(-572px) translateY(-22px); */
-    transform: translateX(0px) translateY(-30px);
+    transform: translateX(0px) translateY(-20px);
     background-size: cover;
     border-radius: 15px;
     transition: transform 0.7s;
     transform-style: preserve-3d;
     clip-path: inset(15px 0 0 0);
     border: 7px solid black;
-    animation: slide  1s forwards
+    animation: slide  4s forwards
 }
 #ecrou{
     width: 170px !important;
@@ -84,10 +83,10 @@ p{
 
 @keyframes slide {
   from {
-    transform: translateX(0px) translateY(-30px);
+    transform: translateX(0px) translateY(-20px);
   }
   to {
-    transform: translateX(-560px) translateY(-26px);
+    transform: translateX(-560px) translateY(-20px);
   }
 }  
 

@@ -17,11 +17,13 @@ export default function Info() {
     }, [id]);
 
     if (!data) {
-        return <div style={{display:'flex', justifyContent:'center', marginTop:'66%'}}>Chargement...</div>;
+        return <div style={{display:'flex', justifyContent:'center', marginTop:'66%'}}></div>;
     }
+    console.log(data)
 
     return (
-        <div style={{textAlign:'center', display:'flex', justifyContent:'center', flexDirection:'column', lineHeight:'3px'}}>
+        <>
+            <div style={{textAlign:'center', display:'flex', justifyContent:'center', flexDirection:'column', lineHeight:'3px'}}>
             <h3>{data.name}</h3>
             <img style={{scale:0.7}} src={data.image} alt={data.name} />
             <p>HP: {data.stats.HP}</p>
@@ -40,5 +42,8 @@ export default function Info() {
                 ))}
             </p>
         </div>
+        </>
+
+ 
     );
 }
